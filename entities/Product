@@ -1,0 +1,58 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Nombre del producto"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "xatspace",
+        "pcback",
+        "fondos",
+        "reproductores",
+        "radio"
+      ],
+      "description": "Categor\u00eda del producto"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Subcategor\u00eda (ej: pcback_static, pcback_gif, banner_static, banner_gif)"
+    },
+    "price": {
+      "type": "string",
+      "description": "Precio en xats"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL de la imagen del producto"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripci\u00f3n del producto"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Caracter\u00edsticas del producto"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Producto destacado"
+    },
+    "order": {
+      "type": "number",
+      "default": 0,
+      "description": "Orden de visualizaci\u00f3n"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
